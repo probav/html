@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Player</title>
+	<link rel="stylesheet" href="Player_elemei/mediaelementplayer.css">
+	<link rel="stylesheet" href="Player_elemei/mejs-skins.css">
+	<script src="Player_elemei/jquery.js"></script>
+	<script src="Player_elemei/mediaelement-and-player.js"></script>
+</head>
+<body>
+<span class="mejs-offscreen">Video Player</span><div id="mep_0" class="mejs-container svg mejs-wmp mejs-video" tabindex="0" role="application" aria-label="Video Player" style="width: 1280px; height: 720px;"><div class="mejs-inner"><div class="mejs-mediaelement"><div class="me-cannotplay" style="width: 1280px; height: 720px;"><a href="rtmp://valami.dynu.com:19142/stream/pass"><span>Download File</span></a></div><video class="mejs-wmp" id="player1" preload="none" style="display: none;" width="1280" height="720">
+
+	<!-- Pseudo HTML5 -->
+	<source src="rtmp://valami.dynu.com:19142/stream/pass" type="video/rtmp">
+	<source type="application/x-mpegURL" src="Player_elemei/index.m3u8">
+</video></div><div class="mejs-layers"></div><div class="mejs-controls" style="display: none;"></div><div class="mejs-clear"></div></div></div>
+<script>
+// using jQuery
+$('video').mediaelementplayer({
+    // useful for <audio> player loops
+	//loop: false,
+    // enables Flash and Silverlight to resize to content size
+	//enableAutosize: true,
+    // the order of controls you want on the control bar (and other plugins below)
+    features: ['playpause','volume','fullscreen'],
+    // turns keyboard support on and off for this instance
+	enableKeyboard: true
+});
+</script>
+
+
+</body></html>
